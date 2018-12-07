@@ -1,1 +1,43 @@
 @import '~bootstrap/scss/bootstrap';
+
+form {
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-right: 75px;
+  display: flex;
+  float: left;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.nav {
+  display: flex;
+  float: left;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+legend {
+  font-size: 15px;
+}
+
+button {
+  margin-left: 35px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+}

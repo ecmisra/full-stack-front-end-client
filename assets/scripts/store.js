@@ -3,4 +3,9 @@
 const store = {
 }
 
-module.exports = store
+// const user = current_user
+
+module.exports = {
+  store
+  // user
+}
