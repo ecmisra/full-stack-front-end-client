@@ -23,6 +23,7 @@ const signInSuccess = function (signInResponse) {
   $('#sign-out').removeClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#sign-in').addClass('hidden')
+  $('#add-directors').removeClass('hidden')
   // console.log(store.user)
 }
 
