@@ -48,18 +48,17 @@
     <div class="add-director">
     <form id="add-director" class="hidden">
       <legend>Add Director</legend>
-      <input name="First Name" type="text" placeholder="First Name">
-      <input name="Last Name" type="text" placeholder="Last Name">
-      <input name="Birthdate" type="date" placeholder="Birthdate">
-      <input name="Famous Movies" type="text" placeholder="Famous Movies">
-      <input type="submit">
+      <input name="directors[first_name]" type="text" placeholder="First Name">
+      <input name="directors[last_name]" type="text" placeholder="Last Name">
+      <input name="directors[born_on]" type="date" placeholder="Birthdate">
+      <input name="directors[famous_movies]" type="text" placeholder="Famous Movies">
+      <button type="submit">Add Director</button>
     </form>
     </div>
 
-<h3 id="message"></h3>
+<h5 id="message"></h5>
 
       <button id="sign-out" class="hidden">Sign Out</button>
       <button id="get-directors" class="hidden">Get Directors</button>
-      <button id="add-directors" class="hidden">Add Director</button>
     </body>
 </html>

@@ -17,9 +17,14 @@ form {
   flex-direction: column;
 }
 
-// .hidden {
-//   display: none;
-// }
+.hidden {
+  display: none;
+}
+
+#message {
+  display: flex;
+  align-content: center;
+}
 
 legend {
   font-size: 15px;
