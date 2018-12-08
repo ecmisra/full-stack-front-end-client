@@ -16,7 +16,7 @@ const signUpFailure = function (signUpFailureResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  $('#message').html(`You signed in! Welcome to Hollywood, ${store.user.email}.`)
+  $('#message').html(`You signed in! Welcome to Hollywood, ${store.user.email}.`).fadeOut(3000)
   // $('#message').addClass('success-message')
   // $('#message').removeClass('error-message')
   $('#change-password').removeClass('hidden')
@@ -41,9 +41,9 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function (signOutResponse) {
-  $('#message').html('You have signed out. Good riddance.')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
+  $('#message').html("You've signed out...that's a wrap for today")
+  // $('#message').addClass('success-message')
+  // $('#message').removeClass('error-message')
   $('#change-password').addClass('hidden')
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')

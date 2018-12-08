@@ -11,10 +11,20 @@ form {
   font-size: 10px;
 }
 
+.get-directors {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  border: 2px solid;
+  padding: 30px;
+  text-align: center;
+}
+
 .nav {
   display: flex;
-  float: left;
-  flex-direction: column;
+  // float: left;
+  // flex-direction: column;
 }
 
 .hidden {
@@ -24,6 +34,7 @@ form {
 #message {
   display: flex;
   align-content: center;
+  margin-left: 30px;
 }
 
 legend {
