@@ -7,16 +7,27 @@ const onAddDirector = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  api.changePassword(data)
-    .then(ui.changePasswordSuccess)
-    .catch(ui.signInFailure)
+  api.addDirector(data)
+    .then(ui.addDirectorSuccess)
+    .catch(ui.addDirectorFailure)
+}
+
+const onGetDirectors = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  $(event.target).trigger('reset')
+  api.getDirectors(data)
+    .then(ui.getDirectorsSuccess)
+    .catch(ui.addDirectorFailure)
 }
 
 const addHandlers = () => {
-  $('#add-director').on('submit', onAddDirector)
+  $('#new-director').on('click', onAddDirector)
+  $('#get-directors').on('click', onGetDirectors)
 }
 
 module.exports = {
   addHandlers,
-  onAddDirector
+  onAddDirector,
+  onGetDirectors
 }

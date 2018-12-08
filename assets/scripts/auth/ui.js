@@ -1,24 +1,24 @@
 const store = require('./../store.js')
 
 const signUpSuccess = function (signUpResponse) {
-  $('#message').html('You signed up! Lights...Camera...Action!')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
+  $('#message').html('You signed up! Lights...Camera...Action!').fadeOut(3000)
+  // $('#message').addClass('success-message')
+  // $('#message').removeClass('error-message')
   $('#sign-up').addClass('hidden')
   // $('#score-display').addClass('hidden')
 }
 
 const signUpFailure = function (signUpFailureResponse) {
-  $('#message').html('Ya blew it, bud. Try again.')
-  $('#message').removeClass('success-message')
-  $('#message').addClass('error-message')
+  $('#message').html('You ruined the shot. Try again.')
+  // $('#message').removeClass('success-message')
+  // $('#message').addClass('error-message')
 }
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
   $('#message').html(`You signed in! Welcome to Hollywood, ${store.user.email}.`)
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
+  // $('#message').addClass('success-message')
+  // $('#message').removeClass('error-message')
   $('#change-password').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-up').addClass('hidden')
@@ -29,7 +29,7 @@ const signInSuccess = function (signInResponse) {
 }
 
 const signInFailure = function (signInFailureResponse) {
-  $('#message').html('Ya blew it, bud. Try again.')
+  $('#message').html('You ruined the shot. Try again.').fadeOut(3000)
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }

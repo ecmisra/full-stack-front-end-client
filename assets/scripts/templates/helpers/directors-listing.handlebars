@@ -1,0 +1,13 @@
+{{#each this as |director|}}
+  {{log director}}
+
+  {{#director}}
+  <div>
+    <div data-id="{{id}}" class="names"> Name: {{first_name}} {{last_name}}</div>
+    <div class="born">{{born_on}}test</div>
+    <div class="movies">{{famous_movies}}test</div>
+
+  </div>
+  {{/director}}
+
+{{/each}}
