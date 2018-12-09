@@ -15,15 +15,24 @@ const getDirectors = (data) => {
   })
 }
 
-const addDirector = function (director) {
+const addDirector = function (firstName, lastName, bornOn, famousMovies) {
   return $.ajax({
     url: config.apiUrl + '/directors',
     method: 'POST',
     headers: {
-      Authorization: `Token token=${store.user.token}`
+      // Authorization: `Token token=${store.user.token}`
+      Authorization: 'Token token=' + store.user.token
     },
     contentType: 'application/json',
-    director: JSON.stringify(director)
+    data: JSON.stringify({
+      'director': {
+        'first_name': firstName,
+        'last_name': lastName,
+        'born_on': bornOn,
+        'famous_movies': famousMovies,
+        'user_id': store.user.id
+      }
+    })
   })
 }
 
