@@ -7,22 +7,24 @@ const onAddDirector = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  api.addDirector(data)
+  console.log(data)
+  api.addDirector(data.director.first_name, data.director.last_name, data.director.born_on, data.director.famous_movies)
     .then(ui.addDirectorSuccess)
     .catch(ui.addDirectorFailure)
 }
 
 const onGetDirectors = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  api.getDirectors(data)
+  api.getDirectors()
     .then(ui.getDirectorsSuccess)
     .catch(ui.addDirectorFailure)
 }
 
+
+
 const addHandlers = () => {
-  $('#new-director').on('click', onAddDirector)
+  $('#add-director').on('submit', onAddDirector)
   $('#get-directors').on('click', onGetDirectors)
 }
 

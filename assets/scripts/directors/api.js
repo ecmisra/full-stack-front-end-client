@@ -3,19 +3,19 @@
 const store = require('../store.js')
 const config = require('../config.js')
 
-const getDirectors = (data) => {
+const getDirectors = () => {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/directors',
     headers: {
       // Authorization: `Token token=${store.user.token}`
     },
-    contentType: 'application/json',
-    data: JSON.stringify(data)
+    contentType: 'application/json'
   })
 }
 
 const addDirector = function (firstName, lastName, bornOn, famousMovies) {
+  // console.log(firstName)
   return $.ajax({
     url: config.apiUrl + '/directors',
     method: 'POST',

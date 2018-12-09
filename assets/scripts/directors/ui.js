@@ -17,7 +17,7 @@ const addDirectorFailure = function (addDirectorFailureResponse) {
 }
 
 const getDirectorsSuccess = function (data) {
-  console.log(data.directors)
+  // console.log(data.directors)
   const showDirectorsHtml = showDirectorsTemplate({ directors: data.directors })
   $('.content').html(showDirectorsHtml)
   // $('#directors').html('list of directors')
