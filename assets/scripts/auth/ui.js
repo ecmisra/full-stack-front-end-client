@@ -25,6 +25,7 @@ const signInSuccess = function (signInResponse) {
   $('#sign-in').addClass('hidden')
   $('#add-director').removeClass('hidden')
   $('#get-directors').removeClass('hidden')
+  $('#edit-directors').removeClass('hidden')
   // console.log(store.user)
 }
 
