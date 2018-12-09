@@ -57,8 +57,20 @@ const updateDirector = function (id, firstName, lastName, bornOn, famousMovies) 
     })
   })
 }
+
+const deleteDirector = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + `/directors/${id}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   getDirectors,
   addDirector,
-  updateDirector
+  updateDirector,
+  deleteDirector
 }
