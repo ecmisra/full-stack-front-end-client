@@ -15,34 +15,35 @@ const getDirectors = (data) => {
   })
 }
 
-const addDirector = function () {
+const addDirector = function (director) {
   return $.ajax({
     url: config.apiUrl + '/directors',
     method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    contentType: 'application/json'
+    contentType: 'application/json',
+    director: JSON.stringify(director)
   })
 }
-// console.log(data)
 
-const updateDirector = function (id, value, over) {
+const updateDirector = function (firstName, lastName, bornOn, famousMovies) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + `/directors/${store.game}`,
+    url: config.apiUrl + `/directors/${store.id}`,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
     contentType: 'application/json',
     data: JSON.stringify(
       {
-        'game': {
-          'cell': {
-            'index': id,
-            'value': value
-          },
-          'over': over
+        'Directors': {
+          'id': {
+            'first_name': firstName,
+            'last_name': lastName,
+            'born_on': bornOn,
+            'famous_movies': famousMovies
+          }
         }
       }
     )
