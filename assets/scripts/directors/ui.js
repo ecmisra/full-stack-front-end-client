@@ -11,7 +11,7 @@ const addDirectorSuccess = function (addDirectorResponse) {
 }
 
 const addDirectorFailure = function (addDirectorFailureResponse) {
-  $('#message').html('You ruined the shot. Try again.').fadeOut(3000)
+  $('#message').html('You ruined the shot. Try again.')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
@@ -20,16 +20,27 @@ const getDirectorsSuccess = function (data) {
   // console.log(data.directors)
   const showDirectorsHtml = showDirectorsTemplate({ directors: data.directors })
   $('.content').html(showDirectorsHtml)
-  // $('#directors').html('list of directors')
+  $('#message').html('Success! Hollywood loves you!')
 }
 
 const updateDirectorSuccess = function (updateDirectorResponse) {
-  $('#message').html('You updated the Director.').fadeOut(3000)
+  $('#message2').html('You updated the Director.')
+  $('#message2').addClass('success-message')
+  $('#message2').removeClass('error-message')
+  // $('#message').clear()
+}
+
+const deleteDirectorSuccess = function (data) {
+  // const showDirectorsHtml = showDirectorsTemplate({ directors: data.directors })
+  // $('.content').html(showDirectorsHtml)
+  $('#message2').html('You left the Director on the cutting room floor.')
+  // $('#message').clear()
 }
 
 module.exports = {
   addDirectorSuccess,
   addDirectorFailure,
   getDirectorsSuccess,
-  updateDirectorSuccess
+  updateDirectorSuccess,
+  deleteDirectorSuccess
 }

@@ -1,7 +1,7 @@
 const store = require('./../store.js')
 
 const signUpSuccess = function (signUpResponse) {
-  $('#message').html('You signed up! Lights...Camera...Action!').fadeOut(3000)
+  $('#message').html('You signed up! Lights...Camera...Action!')
   // $('#message').addClass('success-message')
   // $('#message').removeClass('error-message')
   $('#sign-up').addClass('hidden')
@@ -16,7 +16,7 @@ const signUpFailure = function (signUpFailureResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  $('#message').html(`You signed in! Welcome to Hollywood, ${store.user.email}.`).fadeOut(3000)
+  $('#message').html(`You signed in! Welcome to Hollywood, ${store.user.email}.`)
   // $('#message').addClass('success-message')
   // $('#message').removeClass('error-message')
   $('#change-password').removeClass('hidden')
@@ -25,18 +25,18 @@ const signInSuccess = function (signInResponse) {
   $('#sign-in').addClass('hidden')
   $('#add-director').removeClass('hidden')
   $('#get-directors').removeClass('hidden')
-  $('#edit-directors').removeClass('hidden')
-  // console.log(store.user)
+  $('#edit-director-form').removeClass('hidden')
+  $('#delete-director-form').removeClass('hidden')
 }
 
 const signInFailure = function (signInFailureResponse) {
-  $('#message').html('You ruined the shot. Try again.').fadeOut(3000)
+  $('#message').html('You ruined the shot. Try again.')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
-  $('#message').html('You have successfully changed your password. Feeling paranoid, are we?')
+  $('#message').html("You have successfully changed your password. We'll fix that in post.")
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
@@ -50,8 +50,11 @@ const signOutSuccess = function (signOutResponse) {
   $('#sign-up').removeClass('hidden')
   $('#sign-in').removeClass('hidden')
   $('#change-password').trigger('reset')
-  $('#get-directors').addClass('hidden')
+  // $('#get-directors').addClass('hidden')
   $('#add-director').addClass('hidden')
+  $('#edit-director-form').addClass('hidden')
+  $('#delete-director-form').addClass('hidden')
+  // $('#message2').clear()
 }
 
 module.exports = {

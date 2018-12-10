@@ -24,18 +24,20 @@ const onUpdateDirectors = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
-  console.log(data)
+  // console.log(data)
   api.updateDirector(data.directors.id, data.directors.first_name, data.directors.last_name, data.directors.born_on, data.directors.famous_movies)
     .then(() => onGetDirectors(event))
+    .then(ui.updateDirectorSuccess)
     .catch(ui.addDirectorFailure)
 }
 
 const onDeleteDirector = function (event) {
   event.preventDefault()
   const id = getFormFields(event.target)
-  console.log(id.directors.id)
+  // console.log(id.directors.id)
   api.deleteDirector(id.directors.id)
     .then(() => onGetDirectors(event))
+    .then(ui.deleteDirectorSuccess)
     .catch(ui.failure)
 }
 

@@ -8,14 +8,35 @@ form {
   display: flex;
   float: left;
   flex-direction: column;
-  font-size: 10px;
+  font-size: 13px;
 }
 
+body {
+  background-color: #F0B911;
+  font-family: 'Shrikhand', cursive;
+}
+
+// #sign-out {
+//   height: 50px;
+//   width: 200px;
+// }
+//
+// #get-directors {
+//   height: 50px;
+//   width: 200px;
+// }
+
 .get-directors {
+  background-color: #F02211;
+  color: #F0B911;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  margin-left: 50px;
+  font-family: courier;
+  width: 500px;
+  margin: 0 auto;
+  // margin-bottom: 20px;
+  // margin-left: 100px;
+  // margin-right: 100px;
   border: 2px solid;
   padding: 30px;
   text-align: center;
@@ -24,6 +45,8 @@ form {
 .header {
   display: flex;
   padding: 60px;
+  border: 20px solid;
+  height: 300px;
   // float: left;
   // flex-direction: column;
 }
@@ -33,6 +56,12 @@ form {
 }
 
 #message {
+  display: flex;
+  align-content: center;
+  margin-left: 30px;
+}
+
+#message2 {
   display: flex;
   align-content: center;
   margin-left: 30px;
