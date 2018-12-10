@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://directors-back-end.herokuapp.com/',
+  production: 'https://directors-back-end.herokuapp.com',
   development: 'http://localhost:4741'
 }
 
