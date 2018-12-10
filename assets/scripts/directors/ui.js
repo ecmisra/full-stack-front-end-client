@@ -11,7 +11,7 @@ const addDirectorSuccess = function (addDirectorResponse) {
 }
 
 const addDirectorFailure = function (addDirectorFailureResponse) {
-  $('#message').html('You ruined the shot. Try again.')
+  $('#message2').html('You ruined the shot. Try again.')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
