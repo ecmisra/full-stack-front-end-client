@@ -26,6 +26,7 @@ const addDirectorFailure = function (addDirectorFailureResponse) {
 
 const getDirectorsSuccess = function (data) {
   // console.log(data.directors)
+  $('#content').removeClass('hidden')
   const showDirectorsHtml = showDirectorsTemplate({ directors: data.directors })
   $('.content').html(showDirectorsHtml)
   $('#message').show(100)

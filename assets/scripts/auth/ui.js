@@ -70,6 +70,7 @@ const signOutSuccess = function (signOutResponse) {
   $('#add-director').addClass('hidden')
   $('#edit-director-form').addClass('hidden')
   $('#delete-director-form').addClass('hidden')
+  $('#content').addClass('hidden')
   // $('#edit-director-form').reset()
 }
 
