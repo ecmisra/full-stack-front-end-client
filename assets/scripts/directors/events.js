@@ -34,6 +34,7 @@ const onUpdateDirectors = function (event) {
 
 const onDeleteDirector = function (event) {
   event.preventDefault()
+  $(event.target).trigger('reset')
   const id = getFormFields(event.target)
   // console.log(id.directors.id)
   api.deleteDirector(id.directors.id)
