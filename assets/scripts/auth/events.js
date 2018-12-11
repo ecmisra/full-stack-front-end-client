@@ -24,6 +24,11 @@ const onSignIn = function (event) {
 const onSignOut = function (event) {
   event.preventDefault()
   $(event.target).trigger('reset')
+  $('#change-password').trigger('reset')
+  $('#add-director').trigger('reset')
+  $('#edit-director-form').trigger('reset')
+  $('#delete-director-form').trigger('reset')
+  $('#message2').trigger('reset')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
