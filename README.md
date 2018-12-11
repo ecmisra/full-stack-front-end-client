@@ -38,11 +38,11 @@ My idea for the project was to build an IMDb of sorts; allow users to look up in
 
 ### User Stories
 
-As a user, I want to be able to sign up w/ email & password
-As a user, I want to be able to sign in.
-As a user, I want to be able to add a director to the database (after signing in)
-As a user, I want to be able to edit/remove a director that I have created (after signing in)
-As a user, I want to be able to see/index directors information regardless of signed in
+* As a user, I want to be able to sign up w/ email & password
+* As a user, I want to be able to sign in.
+* As a user, I want to be able to add a director to the database (after signing in)
+* As a user, I want to be able to edit/remove a director that I have created (after signing in)
+* As a user, I want to be able to see/index directors information regardless of signed in
 
 
 ### Wireframe
