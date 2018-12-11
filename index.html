@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Director(y)</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    </head>
+    <body>
+      <h1>Director(y)</h1>
+      <h3>The Director Directory</h3>
+
+      <div>
+      <h5 id="message"></h5>
+      <h5 id="message2"></h5>
+      </div>
+      <br>
+
+      <div class="header">
+        <div class="sign-up">
+      <form id="sign-up">
+        <legend>Sign-Up</legend>
+        <input name="credentials[email]" type="email" placeholder="email">
+        <input name="credentials[password]" type="password" placeholder="password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+        <input type="submit">
+      </form>
+      </div>
+
+      <div class="sign-in">
+      <form id="sign-in">
+        <legend>Sign-In</legend>
+        <input name="credentials[email]" type="email" placeholder="email">
+        <input name="credentials[password]" type="password" placeholder="password">
+        <input type="submit">
+      </form>
+    </div>
+
+    <div class="change-password">
+      <form id="change-password" class="hidden">
+        <legend>Change Password</legend>
+        <input name="passwords[old]" type="password" placeholder="old password">
+        <input name="passwords[new]" type="password" placeholder="new password">
+        <input type="submit">
+      </form>
+    </div>
+
+    <div class="add-director">
+    <form id="add-director" class="hidden">
+      <legend>Add Director</legend>
+      <input name="director[first_name]" type="text" placeholder="First Name">
+      <input name="director[last_name]" type="text" placeholder="Last Name">
+      <input name="director[born_on]" type="date" placeholder="Birthdate">
+      <input name="director[famous_movies]" type="text" placeholder="Famous Movies">
+      <button id="new-director" type="submit">Add Director</button>
+    </form>
+    </div>
+
+    <div class="edit-director-form">
+    <form id="edit-director-form" class="hidden">
+      <legend>Edit Director</legend>
+      <input name="directors[id]" type="text" placeholder="Director ID">
+      <input name="directors[first_name]" type="text" placeholder="First Name">
+      <input name="directors[last_name]" type="text" placeholder="Last Name">
+      <input name="directors[born_on]" type="date" placeholder="Birthdate">
+      <input name="directors[famous_movies]" type="text" placeholder="Famous Movies">
+      <button id="edit-director" type="submit">Edit Director</button>
+    </form>
+    </div>
+
+    <div class="delete-director-form">
+      <form id="delete-director-form" class="hidden">
+        <legend>Delete Director</legend>
+        <input name="directors[id]" type="text" placeholder="Director ID">
+        <button id="delete-director" type="submit">Delete Director</button>
+      </form>
+    </div class="permanent-buttons">
+
+      <button id="sign-out" class="hidden">Sign Out</button>
+      <button id="get-directors">Get Directors</button>
+
+    </div>
+  <div id="content" class="content"></div>
+    <ul>
+    </ul>
+  </div>
+    </body>
+</html>
