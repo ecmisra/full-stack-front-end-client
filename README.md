@@ -1,4 +1,4 @@
-# Full-Stack Project, Back-End README
+# Full-Stack Project, Front-End README
 ## GA Boston WDI28 Project 2
 ## By: Eshan Misra
 
@@ -8,9 +8,9 @@ This was my second project at GA, and the first time building both a back-end ap
 
 My idea for the project was to build an IMDb of sorts; allow users to look up information about film directors, and also be able to add/edit/delete directors of their own (once signed in).
 
-[Back-End Repo](https://github.com/ecmisra/full-stack-back-end)
-[Deployed Heroku Back-End](https://directors-back-end.herokuapp.com/)
-[Deployed Client Front-End](https://ecmisra.github.io/full-stack-front-end-client/)
+* [Back-End Repo](https://github.com/ecmisra/full-stack-back-end)
+* [Deployed Heroku Back-End](https://directors-back-end.herokuapp.com/)
+* [Deployed Client Front-End](https://ecmisra.github.io/full-stack-front-end-client/)
 
 
 ### Technologies Used
@@ -34,6 +34,15 @@ My idea for the project was to build an IMDb of sorts; allow users to look up in
 * Test front-end auth functionality, one function at a time (sign up/in/out, change password)
 * Test front-end resource functionality, one function at a time (add/edit/delete director)
 * Add styling to front-end
+
+
+### User Stories
+
+As a user, I want to be able to sign up w/ email & password
+As a user, I want to be able to sign in.
+As a user, I want to be able to add a director to the database (after signing in)
+As a user, I want to be able to edit/remove a director that I have created (after signing in)
+As a user, I want to be able to see/index directors information regardless of signed in
 
 
 ### Wireframe
