@@ -9,7 +9,7 @@ const onSignUp = function (event) {
   $(event.target).trigger('reset')
   api.signUp(data)
     .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .catch(ui.signInFailure)
 }
 
 const onSignIn = function (event) {
@@ -28,7 +28,7 @@ const onSignOut = function (event) {
   $('#add-director').trigger('reset')
   $('#edit-director-form').trigger('reset')
   $('#delete-director-form').trigger('reset')
-  $('#message2').trigger('reset')
+  // $('#message2').trigger('reset')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)

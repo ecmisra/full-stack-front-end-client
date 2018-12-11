@@ -16,7 +16,11 @@ const signUpFailure = function (signUpFailureResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
+  $('#message').show(100)
   $('#message').html(`You signed in! Welcome to Hollywood, ${store.user.email}.`)
+  setTimeout(function () {
+    $('#message').fadeOut(200).empty(200)
+  }, 2500)
   // $('#message').addClass('success-message')
   // $('#message').removeClass('error-message')
   $('#change-password').removeClass('hidden')
@@ -30,19 +34,31 @@ const signInSuccess = function (signInResponse) {
 }
 
 const signInFailure = function (signInFailureResponse) {
+  $('#message').show(100)
   $('#message').html('You ruined the shot. Try again.')
+  setTimeout(function () {
+    $('#message').fadeOut(200).empty(200)
+  }, 2500)
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
+  $('#message').show(100)
   $('#message').html("You have successfully changed your password. We'll fix that in post.")
+  setTimeout(function () {
+    $('#message').fadeOut(200).empty(200)
+  }, 2500)
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
 
 const signOutSuccess = function (signOutResponse) {
+  $('#message').show(100)
   $('#message').html("You've signed out...that's a wrap for today")
+  setTimeout(function () {
+    $('#message').fadeOut(200).empty(200)
+  }, 2500)
   // $('#message').addClass('success-message')
   // $('#message').removeClass('error-message')
   $('#change-password').addClass('hidden')

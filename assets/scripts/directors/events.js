@@ -38,7 +38,7 @@ const onDeleteDirector = function (event) {
   api.deleteDirector(id.directors.id)
     .then(() => onGetDirectors(event))
     .then(ui.deleteDirectorSuccess)
-    .catch(ui.failure)
+    .catch(ui.addDirectorFailure)
 }
 
 const addHandlers = () => {
