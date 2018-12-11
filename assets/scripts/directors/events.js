@@ -8,7 +8,8 @@ const onAddDirector = function (event) {
   const data = getFormFields(event.target)
   $(event.target).trigger('reset')
   api.addDirector(data.director.first_name, data.director.last_name, data.director.born_on, data.director.famous_movies)
-    .then(() => onGetDirectors(event), ui.addDirectorSuccess)
+    .then(() => onGetDirectors(event))
+    .then(ui.addDirectorSuccess)
     .catch(ui.addDirectorFailure)
 }
 
